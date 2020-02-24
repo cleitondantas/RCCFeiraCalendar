@@ -1,0 +1,37 @@
+buildscript {
+
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.google.gms:google-services:3.0.0'
+    }
+}
+allprojects {
+    ext {
+        androidApplicationId = 'br.com.v8developmentstudio.rccfeiradesantana.calendar'
+        androidBuildToolsVersion = "25.0.0"
+        androidMinSdkVersion = 16
+        androidTargetSdkVersion = 23
+        androidCompileSdkVersion = 24
+        androidVersionCode = 11
+        androidVersionName = "1.1"
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

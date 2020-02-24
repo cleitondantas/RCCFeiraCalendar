@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RCC Feira de Santana</string>
+    <string name="app_calendario">Calendário</string>
+    <string name="app_descricao">Descricao</string>
+    <string name="app_eventos">Eventos</string>
+    <string name="action_settings">Preferências</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="informacoes">Informações</string>
+    <string name="ministerios">Ministérios</string>
+    <string name="novoevento">Novo Evento</string>
+    <string name="lembrete">Lembrete</string>
+    <string name="title_activity_settings">Sobre</string>
+    <string name="title_notification">Notificações</string>
+    <string name="app_favoritos">Favoritos</string>
+    <string name="permis_acesso_conta">Conta</string>
+    <string name="development">Desenvolvido por: V8 Development Studio</string>
+    <string name="ultima_atulizacao">Ultima atulização dos registros</string>
+    <string name="title_setings">Calendário RCC Feira de Santana</string>
+    <string name="title_cadastro_online">Inscrição</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="opcao_abrir_navegador">Abrir pelo navegador</string>
+</resources>

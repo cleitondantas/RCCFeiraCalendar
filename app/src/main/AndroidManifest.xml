@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.v8developmentstudio.rccfeiradesantana.calendar">
+
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+
+    <!-- Used for runtime permissions related to user's contacts and profile. -->
+    <permission-group
+        android:name="android.permission-group.CONTACTS"
+        android:description="@string/permis_acesso_conta"
+        android:label="@string/permis_acesso_conta"
+        android:priority="100" />
+
+    <!--
+         Allows an application to read the user's contacts data.
+        <p>Protection level: dangerous
+    -->
+    <permission
+        android:name="android.permission.READ_CONTACTS"
+        android:description="@string/permis_acesso_conta"
+        android:label="@string/permis_acesso_conta"
+        android:permissionGroup="android.permission-group.CONTACTS"
+        android:protectionLevel="dangerous" />
+
+    <!--
+         Allows an application to write the user's contacts data.
+         <p>Protection level: dangerous
+    -->
+    <permission
+        android:name="android.permission.WRITE_CONTACTS"
+        android:description="@string/permis_acesso_conta"
+        android:label="@string/permis_acesso_conta"
+        android:permissionGroup="android.permission-group.CONTACTS"
+        android:protectionLevel="dangerous" />
+
+    <!-- ====================================================================== -->
+    <!-- Permissions for accessing user's calendar -->
+    <!-- ====================================================================== -->
+    <eat-comment />
+
+    <!-- Used for runtime permissions related to user's calendar. -->
+    <permission-group
+        android:name="android.permission-group.CALENDAR"
+        android:description="@string/app_calendario"
+        android:label="@string/app_calendario"
+        android:priority="200" />
+
+    <!--
+         Allows an application to read the user's calendar data.
+         <p>Protection level: dangerous
+    -->
+    <permission
+        android:name="android.permission.READ_CALENDAR"
+        android:description="@string/app_calendario"
+        android:label="@string/app_calendario"
+        android:permissionGroup="android.permission-group.CALENDAR"
+        android:protectionLevel="dangerous" />
+
+    <!--
+         Allows an application to write the user's calendar data.
+         <p>Protection level: dangerous
+    -->
+    <permission
+        android:name="android.permission.WRITE_CALENDAR"
+        android:description="@string/app_calendario"
+        android:label="@string/app_calendario"
+        android:permissionGroup="android.permission-group.CALENDAR"
+        android:protectionLevel="dangerous" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light">
+        <activity
+            android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.AberturaSplashActivity"
+            android:label="@string/app_name"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.activitys.MainActivity"
+            android:label="@string/app_calendario"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.activitys.DescricaoActivity"
+            android:label="@string/informacoes"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.activitys.ListaEventosActivity"
+            android:label="@string/app_eventos"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.activitys.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.activitys.ListaEventosFavoritosActivity"
+            android:label="@string/app_favoritos"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.activitys.ListaNotificacoesActivity"
+            android:label="@string/title_notification"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.activitys.WebViewActivity"
+            android:noHistory="true" />
+        <receiver
+            android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.services.BroadcastReceiverAux"
+            android:label="BroadcastReceiverAux">
+            <intent-filter>
+                <action android:name="CALENDARIO_RCC_DISPARADO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.services.BroadcastReceiverAtualizacao"
+            android:label="BroadcastReceiverAtualizacao">
+            <intent-filter>
+                <action android:name="CALENDARIO_RCC_ATUALIZACAO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.services.BootCompletedReceiver"
+            android:label="BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver
+            android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.services.FirebaseDataReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+
+        <service android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.services.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="br.com.v8developmentstudio.rccfeiradesantana.calendar.services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/rcc" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/verdercc" />
+
+    </application>
+
+</manifest>

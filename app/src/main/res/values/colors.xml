@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- newColors -->
+
+    <!-- General -->
+    <string name="roxo">#CE93D8</string>
+    <string name="red">#ef9a9a</string>
+    <string name="green">#A5D6A7</string>
+    <string name="blue">#90CAF9</string>
+    <string name="silver">#B0BEC5</string>
+    <string name="black">#3b4144</string>
+    <string name="yelow">#FFF59D</string>
+    <string name="white">#FFFFFF</string>
+    <string name="dark_blue">#7986CB</string>
+    <string name="dark_green">#4DB6AC</string>
+    <string name="dark_red">#e53935</string>
+    <string name="pink">#F48FB1</string>
+    <string name="sky">#81D4FA</string>
+    <string name="verde_agua">#80DEEA</string>
+    <string name="laranja">#FFAB91</string>
+    <string name="marron">#BCAAA4</string>
+    <string name="verde_musgo">#26A69A</string>
+    <string name="verde_folha">#43A047</string>
+
+    <color name="roxo">#CE93D8</color>
+    <color name="red">#ef9a9a</color>
+    <color name="green">#A5D6A7</color>
+    <color name="blue">#90CAF9</color>
+    <color name="silver">#B0BEC5</color>
+    <color name="black">#3b4144</color>
+    <color name="yelow">#FFF59D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="dark_blue">#7986CB</color>
+    <color name="dark_green">#4DB6AC</color>
+    <color name="dark_red">#e53935</color>
+    <color name="pink">#F48FB1</color>
+    <color name="sky">#81D4FA</color>
+    <color name="verde_agua">#80DEEA</color>
+    <color name="laranja">#FFAB91</color>
+    <color name="marron">#BCAAA4</color>
+    <color name="verde_musgo">#26A69A</color>
+    <color name="verde_folha">#43A047</color>
+
+
+    <!-- Fonts -->
+    <color name="monthTitleColor">#161d20</color>
+    <color name="dayOfWeekColor">#161d20</color>
+    <color name="dayOfMonthColor">#808080</color>
+    <color name="currentDayOfMonthColor">#33b5e5</color>
+    <color name="textTistviewColor">#707070</color>
+
+
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#3a9b3d</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="backgroundCards">#F5F5F5</color>
+
+    <!-- Cores RCC-->
+    <color name="verdercc">#4CAF50</color>
+    <color name="amarelorcc">#FFEB3B</color>
+
+</resources>
